@@ -253,8 +253,8 @@ if [[ "${PHP_VERSION}" ]]; then
         exts+=("zend-opcache")
     fi
     
-    php/bin/pear install mail
-    php/bin/pear install Net_SMTP
+    php/bin/PEAR install mail
+    php/bin/PEAR install Net_SMTP
 fi
 
 status "Installing dependencies..."
