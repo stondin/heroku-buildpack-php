@@ -252,6 +252,9 @@ if [[ "${PHP_VERSION}" ]]; then
         install_ext "zend-opcache" "automatic"
         exts+=("zend-opcache")
     fi
+    
+    php/bin/pear install mail
+    php/bin/pear install Net_SMTP
 fi
 
 status "Installing dependencies..."
@@ -379,9 +382,6 @@ install_newrelic_daemon
 install_newrelic_userini
 
 install_blackfire_agent
-
-php/bin/pear install mail
-php/bin/pear install Net_SMTP
 
 if [[ ! -f "Procfile" ]]; then
     bindir=$(composer config bin-dir 2> /dev/null | tail -n 1) # tail, as composer echos outdated version warnings to STDOUT
