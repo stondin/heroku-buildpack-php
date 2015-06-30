@@ -1,6 +1,6 @@
 # Heroku buildpack: PHP with PEAR Mail
 
-This is the official [Heroku buildpack](http://devcenter.heroku.com/articles/buildpacks) for PHP applications modified to run Pear Mail.
+This is the official [Heroku buildpack](http://devcenter.heroku.com/articles/buildpacks) for PHP applications modified to run Pear Mail. Additionally, GZIP compression is enabled.
 
 ## Usage
 
