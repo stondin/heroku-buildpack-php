@@ -253,6 +253,7 @@ if [[ "${PHP_VERSION}" ]]; then
         exts+=("zend-opcache")
     fi
     
+    $BUILD_DIR/.heroku/php/bin/pear clear-cache
     $BUILD_DIR/.heroku/php/bin/pear install mail
     $BUILD_DIR/.heroku/php/bin/pear install Net_SMTP
 fi
